@@ -3,7 +3,7 @@
     <head>
 
         <!-- /.website title -->
-        <title>Backyard Landing Page</title>
+        <title>Catalog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <!-- CSS Files -->
@@ -65,22 +65,24 @@
                 <h3 class="page-header">Continue Reading</h1>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="pdf.html">
-                    <img class="img-responsive" src="images/books/b1.jpg" alt="" style="width:400px;height:300px;">
-                </a>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/books/b2.jpg" alt="" style="width:400px;height:300px;">
-                </a>
-            </div>
+            <div class="container" id="CR">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="pdf.html">
+                        <img class="img-responsive" src="images/books/b1.jpg" alt="" style="width:400px;height:300px;">
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="images/books/b2.jpg" alt="" style="width:400px;height:300px;">
+                    </a>
+                </div>
 
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/books/b3.jpg" alt="" style="width:400px;height:300px;">
-                </a>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="images/books/b3.jpg" alt="" style="width:400px;height:300px;">
+                    </a>
+                </div>
             </div>
 
             <div class="col-md-10 col-sm-12 text-left feature-title">
@@ -89,7 +91,7 @@
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="images/books/b4.jpeg" alt="" style="width:400px;height:300px;">
+                    <img class="img-responsive" src="images/books/b4.jpeg" alt="" style="width:400px;height:300px;" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
                 </a>
             </div>
 
@@ -228,7 +230,7 @@
                 </div>  
             </div>  
         </footer>
-
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
         <!-- /.javascript files -->
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -240,4 +242,121 @@
                                     new WOW().init();
         </script>
     </body>
+
+    <div class="modal fade bs-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <script>
+      function modify_qty(val) {
+        $( "#CR" ).append( '<div class="col-lg-3 col-md-4 col-xs-6 thumb"><a class="thumbnail" href="#"><img class="img-responsive" src="images/books/b4.jpeg" alt="" style="width:400px;height:300px;"></a></div>' );
+        return 0;
+      }
+      </script>
+
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Access a New Textbook</h4>
+          </div>
+            
+
+          <div class="container">
+
+              <div class="row">
+
+                  <div class="col-md-9">
+
+                      <!--<div class="thumbnail">-->
+                          <h4 class="pull-right">$5.99</h4>
+                              <h4><a href="#">Introduction to Algorithms</a>
+                              </h4>
+                              <br>
+                          <img class="img-responsive center-block" src="images/books/b4.jpeg" style="width:400px;height:400px;" alt="" >
+                          <br>
+                          <div class="caption-full">
+                                
+                              
+                              <p>Some books on algorithms are rigorous but incomplete; others cover masses of material but lack rigor. Introduction to Algorithms uniquely combines rigor and comprehensiveness. The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers. Each chapter is relatively self-contained and can be used as a unit of study. The algorithms are described in English and in a pseudocode designed to be readable by anyone who has done a little programming. The explanations have been kept elementary without sacrificing depth of coverage or mathematical rigor.</p>
+
+                              
+                          <!--</div>-->
+                          <div class="ratings">
+                              <p class="pull-right">3 reviews</p>
+                              <p>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star-empty"></span>
+                                  4.0 stars
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="well">
+
+                          <!--<div class="text-right">
+                              <a class="btn btn-success">Leave a Review</a>
+                          </div>
+
+                          <hr>-->
+
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star-empty"></span>
+                                  Anonymous
+                                  <span class="pull-right">10 days ago</span>
+                                  <p>This book was great in terms of quality!</p>
+                              </div>
+                          </div>
+
+                          <hr>
+
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star-empty"></span>
+                                  Anonymous
+                                  <span class="pull-right">12 days ago</span>
+                                  <p>My daily reference manual!</p>
+                              </div>
+                          </div>
+
+                          <hr>
+
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star-empty"></span>
+                                  Anonymous
+                                  <span class="pull-right">15 days ago</span>
+                                  <p>I definitely recommend this item.</p>
+                              </div>
+                          </div>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+          </div>
+          <!-- /.container -->
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="modify_qty(1)">Rent</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </html>
